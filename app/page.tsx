@@ -1,87 +1,21 @@
 import MotionLayer from './motion-layer';
 
-const capabilities = [
-  ['01', 'Product strategy', ['Problem framing', 'Product thinking', 'Prioritization']],
-  ['02', 'UX design', ['User flows', 'Information architecture', 'Interaction design']],
-  ['03', 'Interface systems', ['Visual design', 'Design systems', 'Responsive UI']],
-  ['04', 'Prototyping', ['Rapid concepts', 'High-fidelity prototypes', 'Design handoff']],
+const projects=[
+ {name:'Skribe',type:'Product design · AI · Legal tech',line:'Legal intelligence, made clear.',copy:'A focused workspace for navigating deposition records, key testimony, and the decisions that follow.',tone:'cream'},
+ {name:'CaseCraft AI',type:'Product concept · UX · AI',line:'Turn the work into a story.',copy:'An AI-assisted builder that helps designers shape raw project notes into a clear case study.',tone:'lime'},
+ {name:'AI Workspace',type:'Product exploration · AI tools',line:'A calmer way to create.',copy:'A focused exploration of conversational tools for moving from an idea to a working product.',tone:'blue'}
 ];
-
-function Arrow() { return <span aria-hidden="true">↗</span>; }
-
-export default function Home() {
-  return (
-    <main>
-      <MotionLayer />
-      <header className="site-nav">
-        <a className="brand" href="#top" aria-label="Mahir Akash, home"><span>●</span> mahir</a>
-        <nav aria-label="Primary navigation"><a href="#top">Home</a><a href="#work">Works</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
-        <a className="status" href="#contact"><span aria-hidden="true" /> Available for selected work</a>
-      </header>
-
-      <section className="hero" id="top">
-        <p className="overline">Product designer · Skribe</p>
-        <h1><span>Hi, I&apos;m</span><span>Mahir.</span></h1>
-        <div className="hero-lower">
-          <div className="hero-copy"><p>I design complex products<br/>that feel simple to use.</p><a className="pill light" href="#work">View projects <Arrow/></a></div>
-          <div className="hero-art" aria-label="Abstract product-design composition">
-            <div className="orbit"/><div className="product-card"><span>Product thinking</span><strong>Clarity<br/>over noise.</strong><i>MA / 26</i></div>
-          </div>
-        </div>
-      </section>
-
-      <section className="intro" id="about">
-        <p className="section-dot">About</p>
-        <div className="intro-copy">
-          <h2>I work at the intersection of product thinking, UX, and polished interface design.</h2>
-          <p>Based in Dhaka and currently designing at Skribe, I turn complex workflows into clear, focused experiences. My work spans product strategy, interaction design, design systems, and hands-on prototyping.</p>
-        </div>
-        <div className="skill-cloud"><span>Product strategy</span><span>UX design</span><span>Design systems</span><span>Prototyping</span><span>Figma</span></div>
-      </section>
-
-      <section className="work" id="work">
-        <div className="section-head"><p className="section-dot">Selected work</p><h2><span>Explore my</span><br/>featured projects</h2><a href="#project-grid">View all <Arrow/></a></div>
-        <div className="project-grid" id="project-grid">
-          <article className="project project-wide">
-            <div className="project-visual skribe-visual">
-              <div className="skribe-shell"><div className="skribe-side"><b>S</b><i/><i/><i/></div><div className="skribe-main"><div className="app-top"><span>Deposition workspace</span><em>Ask Skribe</em></div><div className="transcript"><span/><span/><span/><span/><span/><span/></div><div className="insight"><small>AI INSIGHT</small><strong>Key testimony, organized.</strong><p>Review the record with context and clarity.</p></div></div></div>
-            </div>
-            <div className="project-meta"><div><p>Product design · AI · Legal tech</p><h3>Skribe</h3></div><Arrow/></div>
-          </article>
-
-          <article className="project">
-            <div className="project-visual casecraft-visual"><div className="case-window"><header><b>CaseCraft</b><span>Preview</span></header><div className="case-body"><aside><i/><i/><i/><i/></aside><section><small>CASE STUDY BUILDER</small><h4>Tell the story<br/>behind the work.</h4><p>Problem</p><p>Design decisions</p><p>Outcome</p></section></div></div></div>
-            <div className="project-meta"><div><p>Product concept · UX · AI</p><h3>CaseCraft AI</h3></div><Arrow/></div>
-          </article>
-
-          <article className="project">
-            <div className="project-visual workspace-visual"><div className="code-panel"><header><i/><i/><i/><span>workspace.tsx</span></header><div className="code-body"><aside>01<br/>02<br/>03<br/>04<br/>05<br/>06</aside><pre><b>const</b> idea = {'{'}<br/>  prompt: <i>&quot;Build it&quot;</i>,<br/>  mode: <i>&quot;focused&quot;</i>,<br/>  preview: <b>true</b><br/>{'}'};</pre></div><footer><span>Ready</span><span>Preview ↗</span></footer></div></div>
-            <div className="project-meta"><div><p>Product exploration · AI tools</p><h3>AI Workspace</h3></div><Arrow/></div>
-          </article>
-        </div>
-      </section>
-
-      <section className="services">
-        <div className="section-head"><p className="section-dot">Capabilities</p><h2><span>How I shape</span><br/>digital products</h2></div>
-        <div className="service-list">{capabilities.map(([number, title, details], index) => <article key={number as string}><span>{number as string}</span><h3>{title as string}</h3><div>{(details as string[]).map(item => <p key={item}>+ {item}</p>)}</div><i className={`service-preview preview-${index + 1}`} aria-hidden="true"><em/><em/><em/></i><b><Arrow/></b></article>)}</div>
-      </section>
-
-      <section className="motion-band" aria-label="Design disciplines"><div><span>Product thinking</span><i>✦</i><span>UX systems</span><i>✦</i><span>Interface craft</span><i>✦</i><span>Prototyping</span><i>✦</i><span>Product thinking</span><i>✦</i><span>UX systems</span><i>✦</i><span>Interface craft</span><i>✦</i><span>Prototyping</span><i>✦</i></div></section>
-
-      <section className="principles">
-        <p className="section-dot">Working principles</p>
-        <h2>Good design makes the complicated feel <span>obvious.</span></h2>
-        <div className="principle-grid"><article><span>01</span><h3>Understand before decorating</h3><p>Start with the workflow, the constraints, and the decision people need to make.</p></article><article><span>02</span><h3>Make the system coherent</h3><p>Create patterns that scale beyond one screen and help teams move with confidence.</p></article><article><span>03</span><h3>Prototype the real experience</h3><p>Use working interactions to test ideas early and close the gap between design and delivery.</p></article></div>
-      </section>
-
-      <section className="contact" id="contact">
-        <div className="contact-heading"><p className="section-dot">Start a conversation</p><h2>Let&apos;s work<br/>together.</h2><p>Have a product challenge, collaboration, or role in mind? Share a little context and I&apos;ll get back to you.</p></div>
-        <form action="mailto:mahir.akash@gmail.com" method="post" encType="text/plain">
-          <label>Full name *<input required name="name" placeholder="Your full name"/></label><label>Email address *<input required type="email" name="email" placeholder="you@company.com"/></label><label>Subject *<input required name="subject" placeholder="What would you like to discuss?"/></label><label>Project type<select name="project-type" defaultValue=""><option value="" disabled>Select one</option><option>Product design</option><option>UX consultation</option><option>Design systems</option><option>Full-time opportunity</option><option>Something else</option></select></label><label className="message">Message<textarea name="message" placeholder="Tell me about the opportunity..." rows={5}/></label><button className="pill accent" type="submit">Send a message <Arrow/></button>
-        </form>
-      </section>
-
-      <footer><div><p className="section-dot">Impactful product design</p><h2>Let&apos;s start<br/>your project.</h2><a className="pill light" href="mailto:mahir.akash@gmail.com">Get in touch <Arrow/></a></div><div className="footer-side"><h3>Find me online</h3><a href="https://github.com/mahirakash">GitHub <Arrow/></a><a href="mailto:mahir.akash@gmail.com">Email <Arrow/></a><p>Dhaka, Bangladesh<br/>Working worldwide</p></div><small>© {new Date().getFullYear()} Mahir Abrar Akash</small><a className="top" href="#top" aria-label="Back to top">↑</a></footer>
-    </main>
-  );
-}
+const faqs=[['What kind of work do you take on?','Product strategy, UX, interface design, design systems, and high-fidelity prototypes.'],['Can you work with an early idea?','Yes. I can frame the problem, define the first useful version, and make it testable.'],['Do you collaborate with developers?','Yes. I design with implementation in mind and stay close through handoff and iteration.'],['What tools do you use?','Figma for design and prototyping, plus AI and code tools when they help us learn faster.'],['Where are you based?','Dhaka, Bangladesh — collaborating with teams worldwide.'],['How do we start?','Send a short note about your product, its stage, and what you need help unlocking.']];
+function Arrow(){return <span aria-hidden="true">↗</span>}
+function Mock({tone='cream'}:{tone?:string}){return <div className={`mock ${tone}`}><header><i/><i/><i/><b>MAHIR / PRODUCT</b></header><div><aside><i/><i/><i/><i/></aside><section><small>PRODUCT WORKSPACE</small><h4>Clarity<br/>over noise.</h4><p/><p/><p/><article><em>INSIGHT</em><strong>Make the next step obvious.</strong></article></section></div></div>}
+export default function Home(){return <main><MotionLayer/>
+ <header className="nav"><a className="logo" href="#top">MAHIR<br/>AKASH <sup>●</sup></a><nav><a href="#work">Works</a><a href="#about">About</a><a href="#process">Process</a><a href="#contact">Contact</a></nav><a className="button" href="mailto:mahir.akash@gmail.com">Book a call <Arrow/></a></header>
+ <section className="hero grid" id="top"><div className="pitch"><p>Hire your next</p><h1>Design<br/>Partner</h1><span>Product designer at Skribe. I turn complex ideas into clear, useful digital experiences.</span><a className="button" href="#work">Explore my work <Arrow/></a></div><div className="figure"><div className="halo"/><div className="head"/><div className="torso"><i/><i/><i/></div></div><div className="ticker"><span>Mahir — Product Designer — Mahir — Product Designer —&nbsp;</span></div><div className="explore"><b>RECENT EXPLORATIONS</b><div>{[...projects,...projects].map((p,i)=><article className={p.tone} key={i}><Mock tone={p.tone}/></article>)}</div></div></section>
+ <section className="orange grid" id="about"><div className="inner"><p className="eyebrow">Why Mahir</p><p className="intro">When products grow complicated, momentum slows. I help teams find the essential path and make it feel natural.</p><small>That&apos;s where I come in</small><h2>I specialize in <em>product design</em><br/>for ambitious digital teams.</h2><p>From early framing to a polished, build-ready interface, I create experiences that are thoughtful, coherent, and ready to evolve.</p><div className="chips"><span>✦ Product thinking</span><span>◎ Clear systems</span><span>↗ Working prototypes</span></div><small>Currently designing at</small><div className="logos"><b>Skribe</b><span>Legal tech</span><span>AI products</span><span>Design systems</span></div></div></section>
+ <section className="work grid" id="work"><div className="inner"><p className="eyebrow">Selected work</p><h2>Explore some of my<br/><em>product stories.</em></h2>{projects.map((p,i)=><article className="case" key={p.name}><div className={`visual ${p.tone}`}><Mock tone={p.tone}/><span>0{i+1}<b>{p.line}</b></span></div><div className="casecopy"><div><small>{p.type}</small><h3>{p.name}</h3><p>{p.copy}</p></div><a href="mailto:mahir.akash@gmail.com">Discuss a similar project <Arrow/></a></div></article>)}</div></section>
+ <section className="offer grid"><div className="inner"><div className="banner"><small>HAVE SOMETHING COMPLEX IN MIND?</small><h2>Let&apos;s make the path<br/>forward feel obvious.</h2><a className="button" href="mailto:mahir.akash@gmail.com">Start a conversation <Arrow/></a></div><p className="eyebrow">Ways I can help</p><h2>Flexible collaboration,<br/><em>shaped around the product.</em></h2><div className="services">{[['01','Product direction','Problem framing|Experience principles|Roadmap clarity|Concept validation'],['02','Experience design','User flows|Information architecture|Interface design|Interactive prototypes'],['03','Product systems','Design systems|Responsive patterns|Developer handoff|Ongoing support']].map(x=><article key={x[0]}><small>{x[0]}</small><h3>{x[1]}</h3>{x[2].split('|').map(y=><p key={y}>○ {y}</p>)}</article>)}</div></div></section>
+ <section className="process grid" id="process"><div className="inner"><p className="eyebrow">My process</p><h2>A focused path from<br/><em>question to clarity.</em></h2><div className="steps">{['Discover','Frame','Explore','Prototype','Refine','Handoff'].map((s,i)=><article key={s}><small>0{i+1}</small><b>{s}</b><span>{['Context & goals','Flows & priorities','Directions','Real interactions','Feedback loops','Support'][i]}</span></article>)}</div><div className="arrowline">↝</div></div></section>
+ <section className="faq grid"><div className="inner"><p className="eyebrow">Frequently asked questions</p><h2>Here&apos;s what teams<br/><em>usually ask.</em></h2><div className="faqs">{faqs.map((f,i)=><article key={f[0]}><h3>{i+1}. {f[0]}</h3><p>{f[1]}</p></article>)}</div><div className="question"><em>Still have a question?</em><a href="mailto:mahir.akash@gmail.com">Write to Mahir <Arrow/></a></div></div></section>
+ <section className="contact grid" id="contact"><div className="inner"><p>Have a <em>product idea?</em></p><h2>Let&apos;s bring it to life.</h2><span>Share the context, the challenge, and where you want to go next.</span><a className="button" href="mailto:mahir.akash@gmail.com">mahir.akash@gmail.com <Arrow/></a></div></section>
+ <footer className="grid"><div className="photos">{['Product','People','Places','Ideas','Progress'].map((x,i)=><i key={x} style={{'--r':`${[-7,4,-2,6,-5][i]}deg`} as React.CSSProperties}>{x}</i>)}</div><div className="footcard"><div><span className="avatar">M</span><h2>I&apos;m Mahir.</h2><p>I care about making useful products feel ready, clear, and human.</p><small>● &nbsp; Open to meaningful collaborations</small></div><div><a href="https://github.com/mahirakash">GitHub <Arrow/></a><a href="mailto:mahir.akash@gmail.com">Email <Arrow/></a><span>Dhaka, Bangladesh<br/>Working worldwide</span></div></div><div className="copyright">© {new Date().getFullYear()} Mahir <a href="#top">Back to top ↑</a></div><strong className="mahir">mahir</strong></footer>
+ </main>}
