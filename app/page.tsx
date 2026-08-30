@@ -1,3 +1,5 @@
+import MotionLayer from './motion-layer';
+
 const capabilities = [
   ['01', 'Product strategy', ['Problem framing', 'Product thinking', 'Prioritization']],
   ['02', 'UX design', ['User flows', 'Information architecture', 'Interaction design']],
@@ -10,6 +12,7 @@ function Arrow() { return <span aria-hidden="true">↗</span>; }
 export default function Home() {
   return (
     <main>
+      <MotionLayer />
       <header className="site-nav">
         <a className="brand" href="#top" aria-label="Mahir Akash, home"><span>●</span> mahir</a>
         <nav aria-label="Primary navigation"><a href="#top">Home</a><a href="#work">Works</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
@@ -60,8 +63,10 @@ export default function Home() {
 
       <section className="services">
         <div className="section-head"><p className="section-dot">Capabilities</p><h2><span>How I shape</span><br/>digital products</h2></div>
-        <div className="service-list">{capabilities.map(([number, title, details]) => <article key={number as string}><span>{number as string}</span><h3>{title as string}</h3><div>{(details as string[]).map(item => <p key={item}>+ {item}</p>)}</div><b><Arrow/></b></article>)}</div>
+        <div className="service-list">{capabilities.map(([number, title, details], index) => <article key={number as string}><span>{number as string}</span><h3>{title as string}</h3><div>{(details as string[]).map(item => <p key={item}>+ {item}</p>)}</div><i className={`service-preview preview-${index + 1}`} aria-hidden="true"><em/><em/><em/></i><b><Arrow/></b></article>)}</div>
       </section>
+
+      <section className="motion-band" aria-label="Design disciplines"><div><span>Product thinking</span><i>✦</i><span>UX systems</span><i>✦</i><span>Interface craft</span><i>✦</i><span>Prototyping</span><i>✦</i><span>Product thinking</span><i>✦</i><span>UX systems</span><i>✦</i><span>Interface craft</span><i>✦</i><span>Prototyping</span><i>✦</i></div></section>
 
       <section className="principles">
         <p className="section-dot">Working principles</p>
