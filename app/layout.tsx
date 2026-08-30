@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Mahir Akash — Designer & Developer',
-  description: 'Independent designer and developer crafting thoughtful, distinctive digital experiences.',
-  openGraph: { title: 'Mahir Akash — Designer & Developer', description: 'Independent designer and developer crafting thoughtful, distinctive digital experiences.', type: 'website', images: [{ url: '/og.png', width: 1731, height: 909, alt: 'Mahir Akash — Designer & Developer' }] },
-  twitter: { card: 'summary_large_image', title: 'Mahir Akash — Designer & Developer', description: 'Independent designer and developer crafting thoughtful, distinctive digital experiences.', images: ['/og.png'] },
+  title: 'Mahir Abrar Akash — Product Designer',
+  description: 'Product designer at Skribe turning complex workflows into clear, focused digital experiences.',
+  openGraph: { title: 'Mahir Abrar Akash — Product Designer', description: 'Product designer at Skribe turning complex workflows into clear, focused digital experiences.', type: 'website', images: [{ url: 'https://mahir-akash-portfolio.mahirakash.chatgpt.site/og.png', width: 1731, height: 909, alt: 'Mahir Abrar Akash — Product Designer' }] },
+  twitter: { card: 'summary_large_image', title: 'Mahir Abrar Akash — Product Designer', description: 'Product designer at Skribe turning complex workflows into clear, focused digital experiences.', images: ['https://mahir-akash-portfolio.mahirakash.chatgpt.site/og.png'] },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
