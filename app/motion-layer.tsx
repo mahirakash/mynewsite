@@ -5,7 +5,7 @@ import $ from 'jquery';
 export default function MotionLayer() {
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const selector = '.orange .inner > *, .work .inner > *, .process .inner > *, .offer .inner > *, .meeting .inner > *, .footcard';
+    const selector = '.client-inner > *, .client-grid > *, .orange .inner > *, .work .inner > *, .process .inner > *, .offer .inner > *, .meeting .inner > *, .footcard';
     const items = Array.from(document.querySelectorAll(selector));
     $(selector).addClass('reveal-item');
     const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
