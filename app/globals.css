@@ -80,3 +80,6 @@ body .hero-editorial-line{display:none!important;visibility:hidden!important;opa
 @media(max-width:768px){.hero-portrait{left:auto;right:-4vw;bottom:0;width:70vw;height:35%;overflow:visible;border:0;border-radius:0;background:transparent;box-shadow:none}.hero-portrait img{object-fit:contain;object-position:center bottom;scale:1}}
 @media(max-width:430px){.hero-portrait{right:-9vw;width:78vw;height:33%}}
 @media(max-width:375px){.hero-portrait{height:31%}}
+
+/* Render the supplied hero photograph unchanged: no crop, mask, or filter. */
+.hero-portrait img{-webkit-mask-image:none!important;mask-image:none!important;filter:none!important;object-fit:contain!important;scale:1!important}
