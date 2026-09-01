@@ -61,5 +61,7 @@ html,body{max-width:100%;overflow-x:clip}
 @media(prefers-reduced-motion:reduce){.floating-nav nav a,.nav-avatar,.nav-calendar,.nav-calendar span{transition:none}.floating-nav nav a:hover{transform:none}}
 @media(max-width:768px){.hero-copy{left:22px;right:22px;width:auto}}
 @media(max-width:375px){.hero-copy{left:18px;right:18px}}
-.hero-editorial-line{display:none}
 @media(min-width:1800px){.hero-copy{top:8.5%;left:calc(50% - 650px)}.hero-portrait{top:8.5%;right:max(2vw,calc(50% - 1040px));width:min(42vw,1080px);height:91.5%}.hero-portrait img{object-position:center top}}
+
+/* Retired hero ticker: keep hidden if an older cached shell briefly restores it. */
+body .hero-editorial-line{display:none!important;visibility:hidden!important;opacity:0!important}
