@@ -74,7 +74,9 @@ body .hero-editorial-line{display:none!important;visibility:hidden!important;opa
 .hero-kicker{font-family:'Jungle Island',Georgia,serif;font-style:normal;font-weight:400}
 .hero-copy h1{font-family:'Poppins','DM Sans',sans-serif}
 
-/* Framed hero portrait using Mahir's new photograph. */
-@media(min-width:1101px){.hero-portrait{top:8.5%;right:max(2vw,calc(50% - 690px));width:min(44vw,640px);height:83%;overflow:hidden;border:1px solid rgba(255,255,255,.1);border-radius:28px;background:#111;box-shadow:0 35px 90px rgba(0,0,0,.32)}.hero-portrait img{object-fit:cover;object-position:center 34%;scale:1.055}}
-@media(max-width:1100px) and (min-width:769px){.hero-portrait{top:8%;right:3vw;width:47vw;height:82%;overflow:hidden;border:1px solid rgba(255,255,255,.1);border-radius:24px;background:#111;box-shadow:0 30px 70px rgba(0,0,0,.3)}.hero-portrait img{object-fit:cover;object-position:center 34%;scale:1.055}}
-@media(max-width:768px){.hero-portrait{left:16px;right:16px;bottom:0;width:auto;height:40%;overflow:hidden;border:1px solid rgba(255,255,255,.1);border-radius:20px 20px 0 0;background:#111}.hero-portrait img{object-fit:cover;object-position:center 30%;scale:1.04}}
+/* Transparent hero cutout: compact, unframed, and aligned with the copy. */
+@media(min-width:1101px){.hero-portrait{top:9%;right:max(3vw,calc(50% - 670px));width:min(39vw,570px);height:72%;overflow:visible;border:0;border-radius:0;background:transparent;box-shadow:none}.hero-portrait img{object-fit:contain;object-position:center top;scale:1}}
+@media(max-width:1100px) and (min-width:769px){.hero-portrait{top:10%;right:2vw;width:43vw;height:69%;overflow:visible;border:0;border-radius:0;background:transparent;box-shadow:none}.hero-portrait img{object-fit:contain;object-position:center top;scale:1}}
+@media(max-width:768px){.hero-portrait{left:auto;right:-4vw;bottom:0;width:70vw;height:35%;overflow:visible;border:0;border-radius:0;background:transparent;box-shadow:none}.hero-portrait img{object-fit:contain;object-position:center bottom;scale:1}}
+@media(max-width:430px){.hero-portrait{right:-9vw;width:78vw;height:33%}}
+@media(max-width:375px){.hero-portrait{height:31%}}
