@@ -83,3 +83,12 @@ body .hero-editorial-line{display:none!important;visibility:hidden!important;opa
 
 /* Render the supplied hero photograph unchanged: no crop, mask, or filter. */
 .hero-portrait img{-webkit-mask-image:none!important;mask-image:none!important;filter:none!important;object-fit:contain!important;scale:1!important}
+
+/* Keep the desktop hero composition consistent on extra-tall displays. */
+@media(min-width:769px){.hero-editorial{height:clamp(760px,100svh,920px);min-height:760px}}
+
+/* Continuous client slider. */
+.client-inner{max-width:none;overflow:hidden}.client-inner>p,.client-inner>h2{width:min(1120px,calc(100% - 48px));margin-left:auto;margin-right:auto}.client-slider{width:100%;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}.client-track{display:flex;width:max-content;gap:12px;padding:5px 6px 12px;animation:client-slide 28s linear infinite;will-change:transform}.client-track:hover,.client-track:focus-within{animation-play-state:paused}.client-track a{width:270px;min-height:150px;padding:1.6rem;border:1px solid rgba(255,255,255,.08);border-radius:18px;background:#101720;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;transition:transform .3s,border-color .3s,background .3s}.client-track a:hover,.client-track a:focus-visible{transform:translateY(-5px);border-color:rgba(184,164,255,.34);background:#141c27;outline:none}.client-track span{font-size:clamp(1.35rem,2.2vw,2rem);font-weight:800;letter-spacing:-.05em;color:#f1eff5}.client-track small{color:#7f8994;text-transform:uppercase;letter-spacing:.09em;font-size:.55rem}@keyframes client-slide{to{transform:translateX(calc(-50% - 6px))}}
+@media(max-width:768px){.client-inner>p,.client-inner>h2{width:100%}.client-slider{width:calc(100% + 40px);margin-left:-20px}.client-track{gap:8px;animation-duration:23s}.client-track a{width:220px;min-height:124px;padding:1.2rem}}
+@media(max-width:430px){.client-track a{width:190px;min-height:112px;padding:1rem}.client-track span{font-size:1.25rem}}
+@media(prefers-reduced-motion:reduce){.client-track{animation:none;overflow-x:auto}.client-slider{overflow-x:auto;mask-image:none;-webkit-mask-image:none}}
