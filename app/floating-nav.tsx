@@ -26,7 +26,7 @@ export default function FloatingNav() {
   }, []);
 
   return <div className={`floating-nav${open ? ' is-open' : ''}`}>
-    <a className="nav-avatar" href="#top" aria-label="Back to the top"><img src="/mahir-portrait.png" alt=""/></a>
+    <a className="nav-avatar" href="#top" aria-label="Back to the top"><img src="/mahir-hero-portrait.png" alt=""/></a>
     <nav aria-label="Primary navigation">{links.map(([label, href]) => <a className={active === href ? 'is-active' : ''} aria-current={active === href ? 'location' : undefined} key={label} href={href} onClick={() => setOpen(false)}>{label}</a>)}</nav>
     <button className="nav-menu" type="button" aria-expanded={open} aria-controls="mobile-nav-links" onClick={() => setOpen(!open)}><span>{open ? 'Close' : 'Menu'}</span></button>
     <a className="nav-calendar" href="#meeting" aria-label="Schedule a call"><span aria-hidden="true">↗</span></a>

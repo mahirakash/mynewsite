@@ -73,3 +73,8 @@ body .hero-editorial-line{display:none!important;visibility:hidden!important;opa
 
 .hero-kicker{font-family:'Jungle Island',Georgia,serif;font-style:normal;font-weight:400}
 .hero-copy h1{font-family:'Poppins','DM Sans',sans-serif}
+
+/* Framed hero portrait using Mahir's new photograph. */
+@media(min-width:1101px){.hero-portrait{top:8.5%;right:max(2vw,calc(50% - 690px));width:min(44vw,640px);height:83%;overflow:hidden;border:1px solid rgba(255,255,255,.1);border-radius:28px;background:#111;box-shadow:0 35px 90px rgba(0,0,0,.32)}.hero-portrait img{object-fit:cover;object-position:center 34%;scale:1.055}}
+@media(max-width:1100px) and (min-width:769px){.hero-portrait{top:8%;right:3vw;width:47vw;height:82%;overflow:hidden;border:1px solid rgba(255,255,255,.1);border-radius:24px;background:#111;box-shadow:0 30px 70px rgba(0,0,0,.3)}.hero-portrait img{object-fit:cover;object-position:center 34%;scale:1.055}}
+@media(max-width:768px){.hero-portrait{left:16px;right:16px;bottom:0;width:auto;height:40%;overflow:hidden;border:1px solid rgba(255,255,255,.1);border-radius:20px 20px 0 0;background:#111}.hero-portrait img{object-fit:cover;object-position:center 30%;scale:1.04}}
