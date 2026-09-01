@@ -65,3 +65,6 @@ html,body{max-width:100%;overflow-x:clip}
 
 /* Retired hero ticker: keep hidden if an older cached shell briefly restores it. */
 body .hero-editorial-line{display:none!important;visibility:hidden!important;opacity:0!important}
+
+/* Align the visible portrait with the hero copy instead of bottom-centering it. */
+@media(min-width:769px){.hero-portrait img{object-position:center top}}
