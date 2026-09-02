@@ -111,3 +111,6 @@ body .hero-editorial-line{display:none!important;visibility:hidden!important;opa
 
 /* Blend purple and black sections instead of using hard horizontal color cuts. */
 .client-section,.orange{isolation:isolate}.client-section:before,.client-section:after,.orange:after{content:"";position:absolute;z-index:0;left:0;right:0;height:clamp(110px,12vw,190px);pointer-events:none}.client-section:before{top:0;background:linear-gradient(to bottom,rgba(139,92,246,.48),rgba(76,45,150,.2) 42%,transparent)}.client-section:after{bottom:0;background:linear-gradient(to bottom,transparent,rgba(79,47,156,.24) 55%,rgba(139,92,246,.62))}.client-section .client-inner{position:relative;z-index:1}.orange{position:relative}.orange:after{bottom:0;background:linear-gradient(to bottom,transparent,rgba(29,20,55,.45) 48%,var(--ink))}.orange .inner{position:relative;z-index:1}
+
+/* Feather the meeting section's cyan/purple atmosphere into its dark neighbours. */
+.meeting:before{-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 15%,#000 84%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 15%,#000 84%,transparent 100%);-webkit-mask-size:100% 100%;mask-size:100% 100%}
